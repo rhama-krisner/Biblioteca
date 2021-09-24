@@ -1,6 +1,8 @@
 from django.db import models
+import uuid
 
 class Biblioteca_Model(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, null=False, blank=True)
     nome = models.CharField(max_length=70)
     autor = models.CharField(max_length=70)
     isbn = models.IntegerField(blank=True)

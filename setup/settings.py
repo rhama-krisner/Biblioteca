@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'biblioteca',
-    'setup',
+    
 ]
 
 MIDDLEWARE = [
@@ -78,8 +78,12 @@ WSGI_APPLICATION = 'setup.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'djongo',
+        'NAME': 'BibliotecaDB',
+        'ENFORCE_SCHEMA':'False',
+        'CLIENT':{
+            'host':'mongodb+srv://BibliotecaDB:Mg16653651@bibliotecadb.rh1yd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+        }
     }
 }
 

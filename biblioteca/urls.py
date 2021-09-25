@@ -1,11 +1,11 @@
-from rest_framework.routers import DefaultRouter
-from biblioteca.views import Biblioteca_ViewSet
+from rest_framework import routers
+from . import views
+from django.urls import path, include
 
-app_name = 'biblioteca'
 
-router = DefaultRoute(trailing_slash=False) 
-'''Não utiliza barra no final da url'''
+router = routers.DefaultRouter()
+router.register('biblioteca', viewset=views.Biblioteca_Views)
 
-router.register(r'biblioteca',Biblioteca_ViewSet)
-
-urlpatterns = routes.urls
+urlpatterns = [
+    path('', include(router.urls)),
+]

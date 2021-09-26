@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'setup.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'BibliotecaDB',
+        'NAME': 'Biblioteca',
         'ENFORCE_SCHEMA':'False',
         'CLIENT':{
             'host':'mongodb+srv://BibliotecaDB:Mg16653651@bibliotecadb.rh1yd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'

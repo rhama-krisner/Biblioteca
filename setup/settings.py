@@ -78,15 +78,10 @@ WSGI_APPLICATION = 'setup.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'djongo',
-        'NAME': 'Biblioteca',
-        'ENFORCE_SCHEMA':'False',
-        'CLIENT':{
-            'host':'mongodb+srv://BibliotecaDB:Mg16653651@bibliotecadb.rh1yd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
-        }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

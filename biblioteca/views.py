@@ -1,3 +1,6 @@
-from django.shortcuts import render
+from django.http import JsonResponse
 
-# Create your views here.
+def biblioteca(request):
+    if request.method == 'GET':
+        biblioteca = {'id':1, 'nome':'Rhama'}
+        return JsonResponse(aluno)

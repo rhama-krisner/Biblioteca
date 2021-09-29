@@ -1,5 +1,5 @@
 from django.contrib import admin
-from biblioteca.models import Livro_Model
+from biblioteca.models import BibliotecaModel
 
 # Register your models here.
 
@@ -9,4 +9,4 @@ class Biblioteca(admin.ModelAdmin):
     search_fields = ('nome',)
     list_per_page = 20
 
-admin.site.register(Livro_Model, Biblioteca)
+admin.site.register(BibliotecaModel, Biblioteca)
